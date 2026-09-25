@@ -17,16 +17,26 @@ $compteur = 0;
  
 foreach ($demandes as $demande) { 
     if ( 
-        $demande["etat"] === "nouvelle" 
+        
+        $utilisateur["actif"] === true
+        && $demande["etat"] === "nouvelle" 
+        && $utilisateur === "gestionnaire" || "admin"
         && $demande["montant"] <= 1000 
     ) { 
         $compteur++; 
-    } 
+        echo "id" && "Validable";
+
+    } else {
+        echo "Non validable";
+    }
 } 
  
 echo $compteur; 
 
 
+
 // "===" c'est strictement egal a et avec le meme type
+//actif ET nouvelle ET (admin OU (gestionnaire ET montant <= 1000)).
+// || = "ou" en php
 
 ?>
