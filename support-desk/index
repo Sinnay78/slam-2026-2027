@@ -10,7 +10,23 @@
 <body>
     <main class="conteneur">
         <nav class="navigation">...</nav>
-        ...
+
+
+        <form class="formulaire" action="traitement.php" method="post">
+
+    <div class="champ">
+        <label for="titre">Titre</label>
+        <input type="text" id="titre" name="titre" required>
+    </div>
+
+    <div class="champ">
+        <label for="description">Description</label>
+        <textarea id="description" name="description" required></textarea>
+    </div>
+
+    <button class="bouton" type="submit">Créer</button>
+</form>
+
     </main>
 </body>
 
