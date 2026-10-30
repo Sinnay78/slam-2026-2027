@@ -19,10 +19,21 @@
         <input type="text" id="titre" name="titre" required>
     </div>
 
-    <div class="champ">
+        <div class="champ">
         <label for="description">Description</label>
         <textarea id="description" name="description" required></textarea>
     </div>
+
+<div class="champ">
+    <label for="priorite">Priorité</label>
+
+    <select id="priorite" name="priorite" required>
+        <option value="">-- Choisir une priorité --</option>
+        <option value="basse">Basse</option>
+        <option value="normale">Normale</option>
+        <option value="haute">Haute</option>
+    </select>
+</div>
 
     <button class="bouton" type="submit">Créer</button>
 </form>
